@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="/layout :: head">
+    <title>DetailPost</title>
+</head>
+<body>
+<h3>View Post</h3>
+<p>
+    <a th:href="@{/posts}">
+        Back to post list
+    </a>
+</p>
+<div id="detail">
+    <div class="cus-detail">
+        <label>Title:</label>
+        <label th:text="${post.title}"></label>
+    </div>
+    <div class="cus-detail">
+        <label>Content:</label>
+        <label th:text="${post.content}"></label>
+    </div>
+    <div class="cus-detail">
+        <label>Description:</label>
+        <label th:text="${post.description}"></label>
+    </div>
+    <div class="cus-detail">
+        <label>Image:</label>
+        <label th:text="${post.image}"></label>
+    </div>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
